@@ -1,0 +1,141 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+/* Resetting default styles for all elements */
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Setting custom fonts to use throughout the app */
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+/* Styling the entire body of the app */
+body {
+  font-family: var(--font-roboto); /* Use Roboto Slab font */
+  background-color: #287eb7; /* Set the background color to a blue shade */
+}
+
+/* Styling for the main container of the app */
+.app {
+  padding: 4rem; /* Add spacing around the content */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Styling for the main title heading */
+h1 {
+  font-size: 3rem; /* Set font size to 3rem */
+  letter-spacing: 0.9px; /* Add slight letter-spacing for emphasis */
+  /* Create a gradient text effect with a background color */
+  background: linear-gradient(
+    90deg,
+    rgba(249, 211, 180, 1) 0%,
+    rgba(24, 20, 16, 0) 100%
+  );
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For Safari compatibility */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  width: fit-content; /* Adjust width to fit content size */
+}
+
+/* Styling for the search bar container */
+.search {
+  width: 71%; /* Set the search bar width */
+  margin: 4rem 0 2rem; /* Add spacing around the search bar */
+  display: flex;
+  align-items: center; /* Align items vertically within the container */
+  justify-content: center; /* Center the items horizontally within the container */
+  padding: 1.5rem 1.75rem; /* Add padding inside the search bar */
+  border-radius: 3rem; /* Make the search bar container rounded */
+  background: #1f2123; /* Set the background color to a dark shade */
+  /* Add a subtle box shadow for depth effect */
+  -webkit-box-shadow: 5px 5px 7px #7291cd, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+/* Styling for the search input field */
+.search input {
+  flex: 1; /* Allow the input field to expand and fill available space */
+  border: none; /* Remove border from the input field */
+  font-size: 1.5rem; /* Set font size to 1.5rem */
+  font-family: var(--font-raleway); /* Use Raleway font */
+  font-weight: 500; /* Set font weight to 500 (normal) */
+  padding-right: 1rem; /* Add right padding to the input field */
+  outline: none; /* Remove focus outline */
+  color: #a1a1a1; /* Set text color to a light shade of gray */
+  background: #1f2123; /* Set background color to a dark shade */
+}
+
+/* Styling for the search icon image */
+.search img {
+  width: 35px; /* Set image width to 35px */
+  height: 35px; /* Set image height to 35px */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+/* Styling for the container when no movies are found */
+.empty {
+  width: 100%; /* Set container width to 100% */
+  margin-top: 3rem; /* Add top margin to the container */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Styling for the message when no movies are found */
+.empty h2 {
+  font-size: 1.25rem; /* Set font size to 1.25rem */
+  color: #f9d3b4; /* Set text color to a light shade of brown */
+  font-family: var(--font-raleway); /* Use Raleway font */
+}
+
+/* Styling for the container that holds movie cards */
+.container {
+  width: 100%; /* Set container width to 100% */
+  margin-top: 3rem; /* Add top margin to the container */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  flex-wrap: wrap; /* Allow movie cards to wrap to the next row */
+}
+
+/* Styling for each movie card */
+.movie {
+  width: 310px; /* Set movie card width */
+  height: 460px; /* Set movie card height */
+  margin: 1.5rem; /* Add margin around the movie card */
+  position: relative; /* Enable relative positioning for the card */
+  border-radius: 12px; /* Make the movie card rounded */
+  overflow: hidden; /* Hide any content that overflows the card */
+  border: none; /* Remove border from the movie card */
+  /* Add a subtle box shadow for depth effect */
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  /* Apply transition animation for smooth scaling and shadow change on hover */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+/* Styling for the element that holds the movie release year */
+.movie div:nth-of-type(1) {
+  position: absolute; /* Set position to absolute for layering */
+  padding: 16px; /* Add padding around the release year */
+  width: 100%; /* Set width to 100% of the container */
+  opacity: 0; /* Initially make the element transparent */
+  top: 0; /* Align the element to the top of the card */
+  color: #f9d3b4; /* Set text color to a light shade of brown */
+}
+
+/* Styling on hover: increase size and opacity of background image */
+/* Styling on hover: increase size and opacity of background image */
+.movie:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); /* Add larger shadow on hover */
+  transform: scale(1.05, 1.4); /* Add semicolon at the end */
+}
+
